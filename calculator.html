@@ -1,283 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-<style>
-body{
-    background-color: gray;
-}
-    #calculator {
-        border: black;
-        width: 305px;
-        height: 400px;
-        background: #D7D8DC;
-        position: relative;
-        border-radius: 10px;
-        
-    }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculator</title>
+        <style>
+                body {
+                        background-color: gray;
+                }
 
-    #result{
-        width: 285px;
-        height: 100px;
-        border: black;
-        border-style: solid;
-        position: absolute;
-        top: 60px;    
-        right: 5px;
-        background-color: #D4E2E3;
-        border-radius: 5px;
-        border-color:#5B6066;
-        border-width: 5px;
-        border-bottom-width: 10px;
+                #calculator {
+                        border: black;
+                        width: 305px;
+                        height: 400px;
+                        background: #D7D8DC;
+                        position: relative;
+                        border-radius: 10px;
 
-    }
+                }
 
-    #solar{
-        width: 200px;
-        height: 30px;
-        border: black;
-        border-style: double;
-        position: absolute;
-        top: 10px;    
-        right: 10px;
-        background-color: #321600;
-        border-radius: 5px;
-    
-    }
-    #brand{
-        height: 30px;
-        width: 100px;
-        position: absolute;
-        top: 20px;
-        left: 20px;   
-        font-family: Arial, Helvetica, sans-serif; 
-        font-weight:bold;
-        font-size: 120%;
-    }
-
-.btn{
-        width: 55px;
-        height: 30px;
-        position: absolute;
-        border-radius: 10px;
-        background-color:#46474C;
-        color: white;
-        font-weight:bold;
-        font-size: 120%;
-        
-        
-}
-.btn2{
-    width: 55px;
-        height: 30px;
-        position: absolute;
-        border-radius: 10px;
-        background-color:#985A6E;
-        color: white;
-        font-weight:bold;
-        font-size: 120%;
-}
-#plus {
-        width: 55px;
-        height: 65px;
-        position: absolute;
-        right: 5px;
-        bottom: 5px;
-        border-radius: 10px;
-}
+                #result {
+                        width: 285px;
+                        height: 100px;
+                        border: black;
+                        border-style: solid;
+                        position: absolute;
+                        top: 60px;
+                        right: 5px;
+                        background-color: #D4E2E3;
+                        border-radius: 5px;
+                        border-color: #5B6066;
+                        border-width: 5px;
+                        border-bottom-width: 10px;
+                        font-family: 'Arial Narrow Bold', sans-serif;
+                        font-weight: bold;
+                        font-size: 450%;
+                        text-align: right;
+                        
 
 
-#equal{
-        right: 65px;
-        bottom: 5px;
-}
+                }
 
-#dot{
-        right: 125px;
-        bottom: 5px;
-}
-#zero{
-        right: 185px;
-        bottom: 5px;
-}
+                #solar {
+                        width: 200px;
+                        height: 30px;
+                        border: black;
+                        border-style: double;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background-color: #321600;
+                        border-radius: 5px;
 
-#ac{
-        right: 245px;
-        bottom: 5px;
-}
+                }
 
-#c{
-        right: 245px;
-        bottom: 40px;
-}
+                #brand {
+                        height: 30px;
+                        width: 100px;
+                        position: absolute;
+                        top: 20px;
+                        left: 15px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        font-size: 120%;
+                }
 
-#one{
-        right: 185px;
-        bottom: 40px;
-}
+                .btn {
+                        width: 55px;
+                        height: 30px;
+                        position: absolute;
+                        border-radius: 10px;
+                        background-color: #46474C;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 120%;
 
-#two{
-        right: 125px;
-        bottom: 40px;
-}
 
-#three{
-        right: 65px;
-        bottom: 40px;
-}
+                }
 
-#plusminus{
-        right: 245px;
-        bottom: 75px;
+                .btn2 {
+                        width: 55px;
+                        height: 30px;
+                        position: absolute;
+                        border-radius: 10px;
+                        background-color: #985A6E;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 120%;
+                }
 
-}
-#four{
-        right: 185px;
-        bottom: 75px;
-}
+                #plus {
+                        width: 55px;
+                        height: 65px;
+                        position: absolute;
+                        right: 5px;
+                        bottom: 5px;
+                        border-radius: 10px;
+                }
 
-#five{
-        right: 125px;
-        bottom: 75px;
-}
 
-#six{
-        right: 65px;
-        bottom: 75px;
-}
+                #equal {
+                        right: 65px;
+                        bottom: 5px;
+                }
 
-#minus{
-        right: 5px;
-        bottom: 75px;
-}
+                #dot {
+                        right: 125px;
+                        bottom: 5px;
+                }
 
-#percentage{
-        right: 245px;
-        bottom: 110px;
-}
+                #zero {
+                        right: 185px;
+                        bottom: 5px;
+                }
 
-#seven{
-        right: 185px;
-        bottom: 110px;
-}
+                #ac {
+                        right: 245px;
+                        bottom: 5px;
+                }
 
-#eight{
-        right: 125px;
-        bottom: 110px;
-}
+                #c {
+                        right: 245px;
+                        bottom: 40px;
+                }
 
-#nine{
-        right: 65px;
-        bottom: 110px;
-}
+                #one {
+                        right: 185px;
+                        bottom: 40px;
+                }
 
-#multiplication{
-        right: 5px;
-        bottom: 110px;
-}
+                #two {
+                        right: 125px;
+                        bottom: 40px;
+                }
 
-#divison{
-        right: 5px;
-        bottom: 145px;
-}
+                #three {
+                        right: 65px;
+                        bottom: 40px;
+                }
 
-#mplus{
-        right: 65px;
-        bottom: 145px;
-}
+                #plusminus {
+                        right: 245px;
+                        bottom: 75px;
 
-#mminus{
-        right: 125px;
-        bottom: 145px;
-}
+                }
 
-#mr{
-        right: 185px;
-        bottom: 145px;
-}
+                #four {
+                        right: 185px;
+                        bottom: 75px;
+                }
 
-#mc{
-        right: 245px;
-        bottom: 145px;
-}
+                #five {
+                        right: 125px;
+                        bottom: 75px;
+                }
 
-#off{
-        right: 5px;
-        bottom: 180px;
-}
+                #six {
+                        right: 65px;
+                        bottom: 75px;
+                }
 
-#square{
-        right: 65px;
-        bottom: 180px;
-}
-</style>
+                #minus {
+                        right: 5px;
+                        bottom: 75px;
+                }
+
+                #percentage {
+                        right: 245px;
+                        bottom: 110px;
+                }
+
+                #seven {
+                        right: 185px;
+                        bottom: 110px;
+                }
+
+                #eight {
+                        right: 125px;
+                        bottom: 110px;
+                }
+
+                #nine {
+                        right: 65px;
+                        bottom: 110px;
+                }
+
+                #multiplication {
+                        right: 5px;
+                        bottom: 110px;
+                }
+
+                #divison {
+                        right: 5px;
+                        bottom: 145px;
+                }
+
+                #mplus {
+                        right: 65px;
+                        bottom: 145px;
+                }
+
+                #mminus {
+                        right: 125px;
+                        bottom: 145px;
+                }
+
+                #mr {
+                        right: 185px;
+                        bottom: 145px;
+                }
+
+                #mc {
+                        right: 245px;
+                        bottom: 145px;
+                }
+
+                #off {
+                        right: 5px;
+                        bottom: 180px;
+                }
+
+                #square {
+                        right: 65px;
+                        bottom: 180px;
+                }
+        </style>
 
 </head>
+
 <body>
 
 
 
 
 
-    <div id="calculator">
-    
-        <div id="brand">CASIO</div>
+        <div id="calculator">
 
-        <div id="solar"></div>
+                <div id="brand">C.ASIO</div>
 
-        <div id="result"></div>
-        
-        <!-- 1st row-->
-        <button class="btn" id="square">&#x221A</button>
-        <button class="btn" id="off">OFF</button>
+                <div id="solar"></div>
 
-         <!-- 2nd row-->
-         <button class="btn" id="mc">MC</button>
-         <button class="btn" id="mr">MR</button>
-         <button class="btn" id="mminus">M-</button>
-         <button class="btn" id="mplus">M+</button>
-         <button class="btn" id="divison">&#xf7</button>
+                <div id="result"></div>
 
+                <!-- 1st row-->
+                <button class="btn" id="square" >&#x221A</button>
+                <button class="btn" id="off" onclick="document.getElementById('result').innerHTML = ''";>OFF</button>
 
-        <!--fourth from last-->
-        <button class="btn" id="multiplication">&#xd7</button>
-        <button class="btn" id="nine">9</button>
-        <button class="btn" id="eight">8</button>
-        <button class="btn" id="seven">7</button>
-        <button class="btn" id="percentage">&#x25</button>
-        
-        <!--third from last-->
-        <button class="btn" id="minus">&#x2012</button>
-        <button class="btn" id="six">6</button>
-        <button class="btn" id="five">5</button>
-        <button class="btn" id="four">4</button>
-        <button class="btn" id="plusminus">&#xb1</button>
-
-        <!--second from last-->
-        <button class="btn" id="three">3</button>
-        <button class="btn" id="two">2</button>
-        <button class="btn" id="one">1</button>
-        <button class="btn2" id="c">C</button>
+                <!-- 2nd row-->
+                <button class="btn" id="mc">MC</button>
+                <button class="btn" id="mr">MR</button>
+                <button class="btn" id="mminus">M-</button>
+                <button class="btn" id="mplus">M+</button>
+                <button class="btn" id="divison" onclick="document.getElementById('result').innerHTML +='/'">&#xf7</button>
 
 
+                <!--fourth from last-->
+                <button class="btn" id="multiplication" onclick="document.getElementById('result').innerHTML +='*'">&#xd7</button>
+                <button class="btn" id="nine" onclick="document.getElementById('result').innerHTML +=9 ">9</button>
+                <button class="btn" id="eight" onclick="document.getElementById('result').innerHTML +=8 ">8</button>
+                <button class="btn" id="seven" onclick="document.getElementById('result').innerHTML +=7 ">7</button>
+                <button class="btn" id="percentage">&#x25</button>
 
-        
-        <!--bottom row-->
-        <button class="btn" id="plus">+</button>
-        <button class="btn" id="equal">&#x3d</button>
-        <button class="btn" id="dot">&#xb7</button>
-        <button class="btn" id="zero">0</button>
-        <button class="btn2" id="ac">AC</button>
+                <!--third from last-->
+                <button class="btn" id="minus" onclick="document.getElementById('result').innerHTML +='-'">&#x2012</button>
+                <button class="btn" id="six" onclick="document.getElementById('result').innerHTML +=6 ">6</button>
+                <button class="btn" id="five" onclick="document.getElementById('result').innerHTML +=5 ">5</button>
+                <button class="btn" id="four" onclick="document.getElementById('result').innerHTML +=4 ">4</button>
+                <button class="btn" id="plusminus">&#xb1</button>
+
+                <!--second from last-->
+                <button class="btn" id="three" onclick="document.getElementById('result').innerHTML +=3 ">3</button>
+                <button class="btn" id="two" onclick="document.getElementById('result').innerHTML +=2 ">2</button>
+                <button class="btn" id="one" onclick="document.getElementById('result').innerHTML +=1 ">1</button>
+                <button class="btn2" id="c">C</button>
 
 
 
 
+                <!--bottom row-->
+                <button class="btn" id="plus" onclick="document.getElementById('result').innerHTML +='+' ">+</button>
+                <button class="btn" id="equal" onclick="document.getElementById('result').innerHTML =eval(document.getElementById('result').innerHTML)">&#x3d</button>
+                <button class="btn" id="dot" onclick="document.getElementById('result').innerHTML +='.'">&#xb7</button>
+                <button class="btn" id="zero" onclick="document.getElementById('result').innerHTML +=0">0</button>
+                <button class="btn2" id="ac" onclick="document.getElementById('result').innerHTML = ''">AC</button>
 
 
-    </div>
-    
+
+
+
+
+        </div>
+
+
+        <script>
+
+                //off button
+                document.getElementById("off").onclick = function () { 
+                        document.getElementById("result").innerHTML = ""; };
+
+
+               
+
+/*
+                var value1 = null;
+                var value2 = null;
+
+                function calculate(value1, value2) {
+
+                        var result = value1 + value2;
+
+                        return result;
+                }
+
+
+                var result = calculate(3, 3);
+
+                console.log(result);
+                */
+        </script>
 </body>
+
 </html>
