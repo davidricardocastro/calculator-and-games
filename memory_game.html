@@ -11,15 +11,15 @@
     <style>
         body {
             background-color: red;
+            background-image: url('game_img/background2.jpg');
         }
 
         #table {
             position: relative;
-            border-color: rgb(206, 24, 24);
-            border-style: solid;
-            width: 705px;
+            
+            width: 700px;
             height: 560px;
-            background-color: rgba(0, 132, 255, 0.877);
+            background-color: rgba(143, 153, 51, 0.61);
             border-radius: 20px;
             padding: 10px;
         }
@@ -47,7 +47,7 @@
            
             position: fixed;
             left: 800px;
-            top: 100px;
+            top: 200px;
             display: none;
             
             
@@ -57,10 +57,12 @@
             width: 400px;
             height: 100px;
             border-radius: 30px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 50px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 55px;
             color: black;
-            background-color: rebeccapurple;
+            background-color: rgba(143, 153, 51, 0.61);
+            border-color:rgb(143, 153, 51, 0.61);
+            
         }
     </style>
 
@@ -98,6 +100,7 @@
             for (var i = 0; i < cards.length; i++) {
                 game += '<div class="back" id="card_' + i + '" onclick="flipCard(this,\'' + cards[i] + '\')"></div>';
                 //console.log(cards[i])
+                document.getElementById('newGame').style.display='none';
             };
 
             document.getElementById('table').innerHTML = game;
